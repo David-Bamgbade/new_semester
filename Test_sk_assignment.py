@@ -5,7 +5,8 @@ import unittest
 from sk_task_assignment.assignment import generate_random_numbers, custom_len_function, collection_number, \
     sum_of_even_index, sum_of_odd_index, multiplication_of_every_third_index, average_of_all_elements_in_the_list, \
     largest_of_the_elements_in_the_list, smallest_of_the_elements_in_the_list, list_of_strings, letter, \
-    duplicate_elements_in_the_list, sequential_list, remove_duplicate_in_list, use_case
+    duplicate_elements_in_the_list, sequential_list, remove_duplicate_in_list, use_case, add_3rd_elements_in_list, \
+    brand_new_list, sum_of_1st_middle_and_last_element
 
 
 class MyTestCase(unittest.TestCase):
@@ -45,6 +46,13 @@ class MyTestCase(unittest.TestCase):
 
     def test_that_duplicated_elements_are_removed(self):
         self.assertEqual(remove_duplicate_in_list(use_case), {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15})
+
+
+    def test_that_every_third_element_in_list_were_added_together(self):
+        self.assertEqual(add_3rd_elements_in_list(brand_new_list), 16)
+
+    def test_that_the_sum_of_first_middle_and_last_element_is_accurate(self):
+        self.assertEqual(sum_of_1st_middle_and_last_element(brand_new_list), 83)
 
 
 
